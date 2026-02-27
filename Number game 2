@@ -1,0 +1,34 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main() {
+	srand(time(0));
+// These are the variables for the inputs and outputs
+	int playerguess;
+	int randomnubmer = rand() % 101;
+	int guessCount = 0; // Counts the guesses
+
+// This is the inputs for the player at the start of the game
+	cout << "Enter your guess\n";
+	guessCount++;     // Counts the first guess
+	// This is the code for the loop of the game which will repeat until the player guesses the correct number
+	while (playerguess != randomnubmer) {
+		while (!(cin >> playerguess)) {  // Keep asking until the user enters a valid number
+			cout << "Invalid input. Try again:\n ";
+			cin.clear(); // Reset input errors
+			cin.ignore(10000000.00000, '\n');
+		}
+		if (playerguess != randomnubmer) {
+			cout << "incorrect try again\n";
+			guessCount++; //Counting each guess
+}
+	}
+	// When the player guesses the correct nubmer this message.
+	cout << "Correct!!!!\n";
+	cout << " It took you " << guessCount << " guesses.\n" ;
+
+	return 0;
+
+}
