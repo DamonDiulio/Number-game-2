@@ -32,10 +32,9 @@ int main() {
 		    
 		}
 	}
-	// When the player guesses the correct nubmer this message.
+	// When the player guesses the correct number, this message.
 	cout << "Correct!!!!\n";
 	cout << " It took you " << guessCount << " guesses.\n" ;
 
 	return 0;
-
 }
