@@ -23,7 +23,14 @@ int main() {
 		if (playerguess != randomnubmer) {
 			cout << "incorrect try again\n";
 			guessCount++; //Counting each guess
-}
+
+        if (playerguess < randomnubmer) {
+            cout << "Too low!\n";
+        } else {
+            cout << "Too high!\n";
+        }
+		    
+		}
 	}
 	// When the player guesses the correct nubmer this message.
 	cout << "Correct!!!!\n";
